@@ -35,30 +35,7 @@ on top of this without touching the site.
 **"New deployment"** again (or manage existing deployments) — editing
 the code alone doesn't update a live `/exec` URL.
 
-## 2. Fill in the two placeholders
+## 2. Fill in the Script URL
 
-- **Booth number** — search `TBA` in `index.html` (in the "Find us at
-  VIECON" section) and replace it once you have a booth assignment.
 - **SCRIPT_URL** — from step 1 above.
 
-## 3. Deploy
-
-### Option A — Vercel (recommended, free)
-1. Push this folder to a GitHub repo (or drag-and-drop it into Vercel's
-   dashboard under "Add New… → Project → Deploy" without git).
-2. In Vercel: **Add New Project**, import the repo, framework preset
-   **"Other"** (it's static HTML, no build step needed).
-3. Deploy. You'll get a `*.vercel.app` URL immediately.
-4. To use your own domain (e.g. `networkx2026.candelatech.com`), go to
-   the project's **Settings → Domains**, add the subdomain, and add the
-   CNAME record it gives you at whoever manages candelatech.com's DNS.
-
-### Option B — Host directly on candelatech.com
-Drop `index.html` into the same web root as the rest of the site (e.g.
-as `/networkx2026/index.html`) via whatever method you currently use to
-publish the site (FTP/cPanel/etc.). No build step or server-side code
-is required — it's a static file.
-
-## 4. Test it
-Open the deployed page, submit the form with test data, and confirm a
-row appears in the Google Sheet within a few seconds.
